@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+          "type": "chrome",
+          "port": 9002,
+          "request": "launch",
+          "name": "Launch Chrome for localhost generators",
+          "url": "http://localhost",
+          "webRoot": "${workspaceFolder}",
+          "runtimeExecutable": "/usr/bin/google-chrome-stable",
+          "runtimeArgs": [" --remote-debugging-port=9222", "--inspect=9002"]
+        }
+    ]
+}

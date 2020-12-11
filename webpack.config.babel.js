@@ -14,6 +14,7 @@ export default () => ({
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Generators',
+      template: 'index.html',
     }),
   ],
   output: {
