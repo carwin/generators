@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { render } from 'react-dom';
 
 // import flagGen from 'flag-generator';
-import Flag from './components/flag.js';
+import FlagForm from './components/flagForm.js';
 
 function App() {
   const [state, setState] = useState("ClickMe");
-  return <Flag seedString="" />
+  return <FlagForm />
 }
 
 render(<App />, document.getElementById("root"));
