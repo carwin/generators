@@ -1,5 +1,5 @@
 import React from 'react';
-import flagGen from 'flag-generator';
+import flagGen from '@carwin/flag-generator';
 import Flag from './flag';
 
 class FlagForm extends React.Component {

@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@carwin/flag-generator": "^1.0.1",
     "flag-generator": "file:../flag-generator",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"

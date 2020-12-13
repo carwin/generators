@@ -1,5 +1,5 @@
 import React from 'react';
-import flagGen from 'flag-generator';
+import flagGen from '@carwin/flag-generator';
 
 const startSeed = flagGen.Utilities.generateSeed();
 const startColor = flagGen.Utilities.generateColor(startSeed);
