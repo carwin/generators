@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'M+ 1p';
+    src: url('subset-mplus-1p-black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'M+ 1p';
+    src: url('subset-mplus-1p-heavy.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'M+ 1p';
+    src: url('subset-mplus-1p-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'M+ 1p';
+    src: url('subset-mplus-1p-light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

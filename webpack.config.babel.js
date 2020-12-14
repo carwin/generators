@@ -7,7 +7,7 @@ export default () => ({
       contentBase: './dist',
       port: '9002',
   },
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   mode: 'development',
   entry: './src/index.js',
   plugins: [
@@ -22,28 +22,55 @@ export default () => ({
     path: path.resolve(__dirname, './dist'),
   },
   optimization: {
-    moduleIds: 'deterministic',
-    runtimeChunk: 'single',
     splitChunks: {
+      chunks: 'async',
+      minSize: 20000,
+      minRemainingSize: 0,
+      maxSize: 0,
+      minChunks: 1,
+      maxAsyncRequests: 30,
+      maxInitialRequests: 30,
+      automaticNameDelimiter: '~',
+      enforceSizeThreshold: 50000,
       cacheGroups: {
-        vendor: {
+        defaultVendors: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all',
+          priority: -10,
+          reuseExistingChunk: true
         },
-      },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true
+        }
+      }
     },
+    // moduleIds: 'deterministic',
+    // runtimeChunk: 'single',
+    // splitChunks: {
+    //   cacheGroups: {
+    //     vendor: {
+    //       test: /[\\/]node_modules[\\/]/,
+    //       name: 'vendors',
+    //       chunks: 'all',
+    //     },
+    //   },
+    // },
   },
   module: {
     rules: [
       {
         test: /\.(scss|css)$/i,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'resolve-url-loader', 'postcss-loader', 'sass-loader'],
       },
       {
         test: /\.(woff|woff2|eot|ttf)$/,
-        use: {
-          loader: 'url-loader',
+        exclude: /node_modules/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'fonts/',
+          esModule: false,
         }
       },
       {
