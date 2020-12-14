@@ -1,0 +1,213 @@
+/*! ../division */
+
+/*! ../settings */
+
+/*! ../utilities */
+
+/*! ./divisions/Bend */
+
+/*! ./divisions/Border */
+
+/*! ./divisions/Canton */
+
+/*! ./divisions/Chevron */
+
+/*! ./divisions/Cross */
+
+/*! ./divisions/Fesses */
+
+/*! ./divisions/Fusil */
+
+/*! ./divisions/Lozenge */
+
+/*! ./divisions/Pales */
+
+/*! ./divisions/Pall */
+
+/*! ./divisions/Saltire */
+
+/*! ./lib/alea */
+
+/*! ./lib/tychei */
+
+/*! ./lib/xor128 */
+
+/*! ./lib/xor4096 */
+
+/*! ./lib/xorshift7 */
+
+/*! ./lib/xorwow */
+
+/*! ./seedrandom */
+
+/*! ./settings */
+
+/*! ./utilities */
+
+/*! crypto */
+
+/*! export Canton [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export convertHex [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export default [provided] [maybe used in main (runtime-defined)] [usage prevents renaming] */
+
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export findGreaterNumber [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export generateCanvas [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export generateColor [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export generateCount [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export generateSeed [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export generateSeedMultiplier [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export getLastDigit [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export hexToRgb [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export modifySeed [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export processAspectRatioString [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export pseudoShuffle [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export randomHex [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export setDimensionsFromAspectObject [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! namespace exports */
+
+/*! other exports [not provided] [maybe used in main (runtime-defined)] */
+
+/*! other exports [not provided] [no usage info] */
+
+/*! runtime requirements:  */
+
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+
+/*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+
+/*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+
+/*! runtime requirements: module, __webpack_require__ */
+
+/*! runtime requirements: module, __webpack_require__, __webpack_exports__ */
+
+/*! runtime requirements: module, top-level-this-exports, __webpack_require__, __webpack_exports__ */
+
+/*! runtime requirements: top-level-this-exports, module.loaded, module.id, module, __webpack_require__.nmd, __webpack_require__.amdD, __webpack_require__.amdO, __webpack_require__, __webpack_exports__, __webpack_require__.* */
+
+/*! seedrandom */
+
+/*! tinycolor2 */
+
+/*! unknown exports (runtime-defined) */
+
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+
+/*!************************!*\
+  !*** crypto (ignored) ***!
+  \************************/
+
+/*!*************************!*\
+  !*** ./src/division.js ***!
+  \*************************/
+
+/*!*************************!*\
+  !*** ./src/settings.js ***!
+  \*************************/
+
+/*!**************************!*\
+  !*** ./src/utilities.js ***!
+  \**************************/
+
+/*!*******************************!*\
+  !*** ./src/divisions/Bend.js ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/divisions/Pall.js ***!
+  \*******************************/
+
+/*!********************************!*\
+  !*** ./src/divisions/Cross.js ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/divisions/Fusil.js ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/divisions/Pales.js ***!
+  \********************************/
+
+/*!*********************************!*\
+  !*** ./src/divisions/Border.js ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/divisions/Canton.js ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/divisions/Fesses.js ***!
+  \*********************************/
+
+/*!**********************************!*\
+  !*** ./src/divisions/Chevron.js ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/divisions/Lozenge.js ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/divisions/Saltire.js ***!
+  \**********************************/
+
+/*!******************************************!*\
+  !*** ./node_modules/seedrandom/index.js ***!
+  \******************************************/
+
+/*!*********************************************!*\
+  !*** ./node_modules/seedrandom/lib/alea.js ***!
+  \*********************************************/
+
+/*!**********************************************!*\
+  !*** ./node_modules/tinycolor2/tinycolor.js ***!
+  \**********************************************/
+
+/*!***********************************************!*\
+  !*** ./node_modules/seedrandom/lib/tychei.js ***!
+  \***********************************************/
+
+/*!***********************************************!*\
+  !*** ./node_modules/seedrandom/lib/xor128.js ***!
+  \***********************************************/
+
+/*!***********************************************!*\
+  !*** ./node_modules/seedrandom/lib/xorwow.js ***!
+  \***********************************************/
+
+/*!***********************************************!*\
+  !*** ./node_modules/seedrandom/seedrandom.js ***!
+  \***********************************************/
+
+/*!************************************************!*\
+  !*** ./node_modules/seedrandom/lib/xor4096.js ***!
+  \************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/seedrandom/lib/xorshift7.js ***!
+  \**************************************************/
