@@ -1,0 +1,194 @@
+@import 'fonts';
+
+// Variables.
+$sans: 'M+ 1p';
+
+$breakpoints: (
+    'afterMobile': 650px,
+    'desktop': 1024px,
+    'wide': 2048px,
+);
+
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media screen and (min-width: map-get($breakpoints, $name)) {
+      @content;
+    }
+  } @else {
+    // If the key doesn't exist in the map
+    @warn 'Unfortunately, no value could be retrieved from `#{$breakpoints}`. ' + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+
+body {
+    background: #e7dada;
+    color: #3d393a;
+}
+
+h1 {
+    font-family: $sans;
+    font-weight: 300;
+    font-size: 3rem;
+
+    a {
+        text-decoration: none;
+        color: #e73f3f;
+
+        &:hover {
+            border-bottom: 2px solid #e78c8c;
+        }
+    }
+}
+
+// ---- Form basic styles.
+
+button {
+    padding: 9px 12px;
+    appearance: none;
+    font-family: $sans;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 35px;
+    color: #ffb2b2;
+    border-radius: 6px;
+    background: #3d393a;
+    text-shadow: 0 1px 1px #7f7f7f;
+    border: 0;
+    outline: 0;
+    margin-bottom: 1rem;
+
+    &:hover {
+      color: #e78c8c;
+      text-shadow: 0 1px 1px #191919;
+      cursor: pointer;
+    }
+
+}
+
+ label {
+    font-family: $sans;
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+input[type="text"],
+input[type="number"] {
+    font-family: $sans;
+    font-size: 1.25rem;
+    text-align: center;
+    display: block;
+    height: 30px;
+    line-height: 1.5;
+    padding: 8px 10px;
+    width: 300px;
+    margin: 0 auto 1.5rem;
+    // border-radius: 9px;
+    // border-color: #3d393a;
+
+    background: none;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #e78c8c;
+    color: #3d3a39;
+
+    &:focus {
+        border-bottom: 2px solid #ff2222;
+    }
+
+    &:-internal-autofill-selected {
+        background: transparent;
+    }
+}
+
+// Flag form -----------------
+
+.flag-form {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    @include respond-to(afterMobile) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+    @include respond-to(desktop) {
+        max-width: 1024px;
+        align-items: start;
+    }
+}
+
+.flag-form__random-container {
+    @include respond-to(afterMobile) {
+        order: 1;
+        flex: auto;
+    }
+    @include respond-to(desktop) {
+        order: 2;
+    }
+}
+
+.flag-form__form {
+    margin-bottom: 2.3rem;
+    @include respond-to(afterMobile) {
+        order: 2;
+        flex: auto;
+    }
+    @include respond-to(desktop) {
+        order: 3;
+    }
+}
+
+.flag-form__flag-container {
+    @include respond-to(afterMobile) {
+        order: 3;
+        flex: auto;
+    }
+    @include respond-to(desktop) {
+        max-width: 600px;
+        order: 1;
+    }
+}
+
+// Flag -------------------------
+.flag__canvas-container {
+    margin-bottom: 2.3rem;
+
+    canvas {
+        max-width: 100%;
+    }
+
+}
+
+.flag__seed {
+    font-family: $sans;
+    font-size: 0.8rem;
+    color: #92586e;
+}
+
+.flag__attributes {
+    font-family: $sans;
+    display: block;
+    max-width: 590;
+    margin: 0 auto;
+}
+
+.flag__attributes-list {
+    text-align: left;
+}
+
+.flag__attributes-toggle {
+    text-transform: lowercase;
+    font-size: 1.3rem;
+    text-shadow: none;
+}
+
+// author ------
+.author {
+    @include respond-to(afterMobile) {
+        flex: 1 1 100%;
+    }
+}

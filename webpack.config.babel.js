@@ -37,8 +37,14 @@ export default () => ({
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        test: /\.(scss|css)$/i,
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf)$/,
+        use: {
+          loader: 'url-loader',
+        }
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,

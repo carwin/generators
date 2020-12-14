@@ -16,6 +16,7 @@ const startFlag = new flagGen.Flag({
 const initialState = {
   seed: +startFlag.seed,
   flag: startFlag,
+  ratio: '3:5',
 }
 
 // @todo: modify flagGenerator() to accept an element or an ID to hook it's canvas on.
@@ -23,6 +24,7 @@ class Flag extends React.Component {
   constructor(props) {
     super(props);
     this.state = initialState;
+    this.toggleAttributes = this.toggleAttributes.bind(this);
   }
 
   getDivisionInfo(divisionIndex) {
@@ -46,6 +48,17 @@ class Flag extends React.Component {
     return divisionInfo;
   }
 
+  toggleAttributes() {
+    let toggled;
+    if (this.state.attributesVisible === true) {
+      toggled = false;
+    } else {
+      toggled = true;
+    }
+
+    this.setState({attributesVisible: toggled});
+  }
+
   componentDidMount() {
     // Draw the flag after the component has mounted.
     this.state.flag.drawFlag();
@@ -57,10 +70,10 @@ class Flag extends React.Component {
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (nextProps.seed !== prevState.seed) {
+    if (nextProps.seed !== prevState.seed || (nextProps.ratio !== prevState.ratio) && nextProps.ratio !== '') {
       const newState = {
         seed: nextProps.seed,
-        flag: new flagGen.Flag({id: "flag__canvas-container", aspectRatio: "3:5", divisionCount: 2, seed: nextProps.seed}),
+        flag: new flagGen.Flag({id: "flag__canvas-container", aspectRatio: nextProps.ratio, divisionCount: 2, seed: nextProps.seed}),
       }
       return newState;
     }
@@ -80,22 +93,25 @@ class Flag extends React.Component {
         <div className="flag__seed">
           Seed string <strong>"{this.props.seedString}"</strong> generated seed: <strong>{this.state.seed}</strong>
         </div>
-        <div id="flag__canvas-container" />
+        <div id="flag__canvas-container" className="flag__canvas-container" />
 
+        <button className="flag__attributes-toggle" onClick={this.toggleAttributes}>{this.state.attributesVisible ? 'Hide' : 'View'} Flag Attributes</button>
+        {this.state.attributesVisible &&
         <div className="flag__attributes">
-          <ul>
-            <li><strong>Color sucks</strong>: {this.state.flag.color.color}</li>
-            <li><strong>Seed string</strong>: {this.props.seedString || 'none'}</li>
-            <li><strong>Generated seed</strong>: {this.state.seed}</li>
-            <li><strong>Aspect ratio</strong>: {this.state.flag.aspect.h}:{this.state.flag.aspect.w}</li>
-            <li><strong>Dimensions</strong>: {this.state.flag.dimensions.h}x{this.state.flag.dimensions.w}</li>
-            <li><strong># of Divisions</strong>: {this.state.flag.divisionCount}
+          <ul className="flag__attributes-list">
+            <li className="flag__attributes-list-item"><strong>Base Color</strong>: {this.state.flag.color.color}</li>
+            <li className="flag__attributes-list-item"><strong>Seed string</strong>: {this.props.seedString || 'none'}</li>
+            <li className="flag__attributes-list-item"><strong>Generated seed</strong>: {this.state.seed}</li>
+            <li className="flag__attributes-list-item"><strong>Aspect ratio</strong>: {this.state.flag.aspect.h}:{this.state.flag.aspect.w}</li>
+            <li className="flag__attributes-list-item"><strong>Dimensions</strong>: {this.state.flag.dimensions.h}x{this.state.flag.dimensions.w}</li>
+            <li className="flag__attributes-list-item"><strong># of Divisions</strong>: {this.state.flag.divisionCount}
               <ul>
                 {divisionParams}
               </ul>
             </li>
           </ul>
         </div>
+        }
       </div>
     );
   }
