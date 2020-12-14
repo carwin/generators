@@ -8,6 +8,11 @@ I hope fans of vexillology, worldbuilders, dungeon masters, etc... will enjoy.
 You can visit the generator site here: https://carwin.github.io/generators
 
 ## Flag Generator
+<img src="./src/images/example-flag-2.png" width="150" />
+<img src="./src/images/example-flag-3.png" width="150" />
+<img src="./src/images/example-flag-4.png" width="150" />
+<img src="./src/images/example-flag-5.png" width="150" />
+<img src="./src/images/example-flag-6.png" width="150" />
 
 The flag generator operates using my [flag-generator](https://github.com/carwin/flag-generator)
 project, which is also published as an npm package in the GitHub registry.
