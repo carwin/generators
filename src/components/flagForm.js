@@ -15,6 +15,7 @@ class FlagForm extends React.Component {
       seed: starterSeed,
       lastSeed: starterSeed,
       ratio: '3:5',
+      divisionCount: 1,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -53,6 +54,11 @@ class FlagForm extends React.Component {
         ratio: event.target.value,
       });
     }
+    if (event.target.id === 'form-divisionCount') {
+      this.setState({
+        divisionCount: event.target.value,
+      });
+    }
   }
 
   generateRandom(event) {
@@ -88,12 +94,15 @@ class FlagForm extends React.Component {
                 onChange={this.handleChange}
                 value={typeof this.state.seed === 'number' ? this.state.seed : 0.1} />
             </label>
+            <label>divisions
+              <input id="form-divisionCount" type="number" step="1" min="1" max="" onChange={this.handleChange} value={this.state.divisionCount} />
+            </label>
             <label>ratio
               <input id="form-ratio" type="text" placeholder="3:5" onChange={this.handleChange} value={this.state.ratio} />
             </label>
           </form>
           <div className="flag-form__flag-container">
-            <Flag seedString={this.state.seedString} seed={this.state.seed} ratio={/^[0-9]:[0-9]/.test(this.state.ratio) ? this.state.ratio : '3:5'} />
+            <Flag seedString={this.state.seedString} seed={this.state.seed} ratio={/^[0-9]:[0-9]/.test(this.state.ratio) ? this.state.ratio : '3:5'} divisionCount={this.state.divisionCount} />
           </div>
         </div>
     );

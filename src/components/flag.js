@@ -17,6 +17,7 @@ const initialState = {
   seed: +startFlag.seed,
   flag: startFlag,
   ratio: '3:5',
+  divisionCount: 2,
 }
 
 // @todo: modify flagGenerator() to accept an element or an ID to hook it's canvas on.
@@ -73,7 +74,7 @@ class Flag extends React.Component {
     if (nextProps.seed !== prevState.seed || (nextProps.ratio !== prevState.ratio) && nextProps.ratio !== '') {
       const newState = {
         seed: nextProps.seed,
-        flag: new flagGen.Flag({id: "flag__canvas-container", aspectRatio: nextProps.ratio, divisionCount: 2, seed: nextProps.seed}),
+        flag: new flagGen.Flag({id: "flag__canvas-container", aspectRatio: nextProps.ratio, divisionCount: nextProps.divisionCount, seed: nextProps.seed}),
       }
       return newState;
     }
