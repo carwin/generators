@@ -19,8 +19,8 @@
   "dependencies": {
     "@carwin/flag-generator": "^1.0.1",
     "flag-generator": "file:../flag-generator",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
